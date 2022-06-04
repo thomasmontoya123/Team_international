@@ -48,30 +48,29 @@ can assume all values will be less than 1,000.
 
     ```
         python3 -m venv venv
+    ```
 
 - Activate Environment on windows 
 
     ```
         path\to\venv\Scripts\activate.bat
+    ```
 
 - Activate Environment on linux 
 
     ```
         source /path/to/venv/bin/activate
+    ```
 
 
 
 
 # Run TESTS
 
-- If need run the tests execute the follow command
-
-    ```
         pytest
 
 
 # Run Email example
 
 
-    ```
         python3 mail_example.py

@@ -3,7 +3,7 @@ def type_validation(in_types: list, decorating_class=False):
 
     Args:
         in_types (list): Expetected argument types
-        decorating_class (bool, optional): Flag to specify if we are decorating a class or a function. Defaults to False.
+        decorating_class (bool, optional): Flag to specify if we are decorating a class method or a function. Defaults to False.
     """
     def decorator(function):
         def wrapper(*args, **kwargs):
