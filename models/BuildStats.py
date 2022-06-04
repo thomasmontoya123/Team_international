@@ -1,8 +1,12 @@
+from decorators.type_validator import type_validation
+
+
 class BuildStats:
 
     def __init__(self, obj) -> None:
         self.elements = obj.elements
 
+    @type_validation([int], decorating_class=True)
     def less(self, number: int) -> list:
         """get values in the datacapture element list less than the number
 
@@ -14,6 +18,7 @@ class BuildStats:
         """
         return list(filter(lambda x: (x < number), self.elements))
 
+    @type_validation([int], decorating_class=True)
     def greater(self, number: int) -> list:
         """get values in the datacapture element list greater than the number
 
@@ -25,6 +30,7 @@ class BuildStats:
         """
         return list(filter(lambda x: (x > number), self.elements))
 
+    @type_validation([int, int], decorating_class=True)
     def between(self, start: int, end: int) -> list:
         """get values in the datacapture element list between start and end
 

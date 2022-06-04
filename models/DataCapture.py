@@ -1,4 +1,7 @@
+from pickle import TRUE
 from models.BuildStats import BuildStats
+from decorators.positive_validation import positive_validation
+from decorators.type_validator import type_validation
 
 
 class DataCapture:
@@ -21,6 +24,8 @@ class DataCapture:
         """
         return self.__elements
 
+    @type_validation([int], decorating_class=True)
+    @positive_validation(decorating_class=True)
     def add(self, item: int):
         """adds one number to the element list
 
